@@ -1,0 +1,173 @@
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 1em;
+  line-height: 1.3;
+  background-color: #f6f7f9;
+  color: #404e5f;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+textarea {
+  font-family: "Lato", sans-serif;
+  background-color: transparent;
+}
+
+.expandable {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(#000, #000), linear-gradient(#000, #000);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.plus {
+  background-size: 50% 2px, 2px 50%;
+}
+
+.minus {
+  background-size: 50% 2px, 0px 0%;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.6);
+}
+
+.search-bar-section {
+  border-bottom: 3px solid #c4ca18;
+  margin-bottom: 30px;
+}
+
+.search-bar-section input {
+  border: none;
+  padding: 12px;
+  color: #c4ca18;
+  font-weight: 700;
+  font-size: 1.2em;
+}
+
+.search-bar-section input[type="text"]:focus,
+.search-bar-section input[type="number"]:focus {
+  border: none;
+  outline: none !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"]::placeholder {
+  color: #c4ca18;
+  font-weight: 100;
+}
+
+input[type="text"]::placeholder {
+  color: red;
+  font-weight: 500;
+}
+
+.genre-items {
+  margin: 12px 0px;
+}
+
+.genre-items span {
+  color: #c4ca18;
+  padding-right: 6px;
+}
+
+.genre-items span:not(:first-child) {
+  padding-left: 6px;
+}
+
+.genre-items span:not(:last-child) {
+  border-right: 1px solid #c4ca18;
+}
+
+.movie-release-date {
+  color: #c4ca18;
+}
+
+.header div {
+  position: fixed;
+  top: 20px;
+  font-weight: 500;
+  font-size: 2em;
+  left: 80px;
+  color: black;
+}
+
+.header .menu-icon {
+  cursor: pointer;
+  user-select: none;
+  position: fixed;
+  top: 40px;
+  left: 20px;
+}
+
+.header .menu-icon .nav-icon {
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 25px;
+  background: black;
+}
+
+.header .menu-icon .nav-icon:before,
+.header .menu-icon .nav-icon:after {
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .nav-icon:before {
+  top: 8px;
+  height: 2px;
+  background: black;
+}
+
+.header .menu-icon .nav-icon:after {
+  top: -7px;
+  height: 2px;
+  background: black;
+}
+
+.header .menu-button {
+  display: none;
+}
+
+.header .menu-button:checked ~ .menu-center {
+  max-height: 378px;
+}
+
+.header .menu-button:checked ~ .menu-icon .nav-icon {
+  background: transparent;
+}
+
+.header .menu-button:checked ~ .menu-icon .nav-icon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-button:checked ~ .menu-icon .nav-icon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-button:checked ~ .menu-icon:not(.steps) .nav-icon:before,
+.header .menu-button:checked ~ .menu-icon:not(.steps) .nav-icon:after {
+  top: 0;
+}
+
+.not-visible {
+  display: none;
+}
