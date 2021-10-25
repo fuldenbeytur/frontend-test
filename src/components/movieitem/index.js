@@ -7,12 +7,16 @@ export default class MovieItem extends React.Component {
     const { movie, genre, isMobile } = this.props;
     return (
       <MovieItemWrapper
-        style={isMobile ? { height: "200px" } : { height: "336px" }}
+        style={isMobile ? { height: "200px" } : { height: "274px" }}
       >
         <LeftCont>
           <img
-            style={!isMobile ? { height: "100%" } : { height: "98%" }}
-            src={`https://image.tmdb.org/t/p/w185/` + `${movie.poster_path}`}
+            style={
+              !isMobile
+                ? { height: "auto", minWidth: "100%" }
+                : { height: "98%" }
+            }
+            src={`https://image.tmdb.org/t/p/w154/${movie.poster_path}`}
             alt="SearchIcon"
           />
         </LeftCont>
@@ -33,7 +37,7 @@ export default class MovieItem extends React.Component {
           <div
             style={
               !isMobile
-                ? { height: "200px" }
+                ? { height: "130px", overflow: "hidden", marginBottom: "8px" }
                 : { height: "47%", overflow: "hidden", marginBottom: "8px" }
             }
             className="movie-overview"
@@ -57,11 +61,11 @@ const MovieItemWrapper = styled.div`
 
 const LeftCont = styled.div`
   padding: 20px;
-  width: 35%;
+  width: 21%;
 `;
 
 const RightCont = styled.div`
-  padding: 20px;
+  padding: 20px 20px 20px 0px;
   width: 100%;
 `;
 
