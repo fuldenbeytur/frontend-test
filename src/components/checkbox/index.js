@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 export default class CheckBox extends React.Component {
+  // TEST
   render() {
     const { item } = this.props;
     return (
